@@ -5,6 +5,7 @@ flake8==6.0.0  # Added for the Code Quality section in chapter 2 of part 2 of tu
 gunicorn==20.1.0
 isort==5.12.0  # Added for the Code Quality section in chapter 2 of part 2 of tut
 psycopg2-binary==2.9.5
+pytest-xdist==3.2.1  # Added for the Pytest Monkeypatching section in chapter 6 of part 2 of tut
 pytest==7.2.2
 pytest-django==4.5.2
 pytest-cov==4.0.0 # Added for the Code Coverage and Quality chapter of part 2
