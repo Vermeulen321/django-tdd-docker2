@@ -3,6 +3,7 @@ image: docker:stable
 stages:
   - build
   - test
+  #  Add deploy here when using a service like Heroku, part of Continuous Delivery (chapter 4 of part 2 of tut) that is being left out
 
 variables:
   IMAGE: ${CI_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}
