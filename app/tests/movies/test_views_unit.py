@@ -3,14 +3,11 @@ from django.http import Http404
 
 from movies.views import MovieSerializer, MovieDetail, Movie
 
+
 @pytest.mark.parametrize(
     "payload, status_code",
     [[{}, 400], [{"title": "The Big Lebowski", "genre": "comedy"}, 400]],
 )
-def test_update_movie_invalid_json(client, monkeypatch, payload, status_code):
-    pass
-
-
 def test_add_movie(client, monkeypatch):
     payload = {"title": "The Big Lebowski", "genre": "comedy", "year": "1998"}
 
