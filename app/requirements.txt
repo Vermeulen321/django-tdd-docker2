@@ -1,7 +1,11 @@
+black==23.3.0  # Added for Code Quality section in chapter 2 of part 2 of tut
 Django==4.1.7
 djangorestframework==3.14.0
+flake8==6.0.0  # Added for the Code Quality section in chapter 2 of part 2 of tut
 gunicorn==20.1.0
+isort==5.12.0  # Added for the Code Quality section in chapter 2 of part 2 of tut
 psycopg2-binary==2.9.5
 pytest==7.2.2
 pytest-django==4.5.2
+pytest-cov==4.0.0 # Added for the Code Coverage and Quality chapter of part 2
 whitenoise==6.4.0  # Added for the whitenoise section of the part 2 Deployment tut.
