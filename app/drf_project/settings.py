@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Added for the WhiteNoise part of tut (part 2: Deployment)
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,3 +122,15 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'movies.CustomUser'
+
+# Disable the Browsable API in production.
+if not DEBUG:
+    REST_FRAMEWORK = {
+        "DEFAULT_RENDERER_CLASSES": (
+            "rest_framework.renderers.JSONRenderer",
+        )
+    }
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # WhiteNoise part 2: Deployment
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'  # WhiteNoise part 2: Deployment
