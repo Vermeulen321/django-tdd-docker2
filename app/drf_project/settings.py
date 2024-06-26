@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "drf_yasg",
     "movies",
 ]
 
@@ -145,3 +146,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # WhiteNoise part 2: Deploy
 STATICFILES_STORAGE = (
     "whitenoise.storage.CompressedStaticFilesStorage"  # WhiteNoise part 2: Deployment
 )
+
+SWAGGER_SETTINGS = {"USE_SESSION_AUTH": False}
