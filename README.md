@@ -1,5 +1,9 @@
 # my-project
 
+# Test-Driven Development with Django, Django REST Framework, and Docker
+
+[![pipeline status](https://gitlab.com/jumar1/django-tdd-docker2/badges/master/pipeline.svg)](https://gitlab.com/jumar1/django-tdd-docker2/commits/master)
+
 
 
 ## Getting started
